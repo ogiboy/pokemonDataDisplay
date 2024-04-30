@@ -1,22 +1,20 @@
-import { useState } from "react";
-import { mockPokemonsData } from "../mock/pokeData";
-// import Link from "next/link";
-// import Image from "next/image";
+import { useState } from 'react'
+import { mockPokemonsData } from '../mock/pokeData'
 
 const PokeCard = () => {
   const sortedPokesByName = mockPokemonsData.sort((a, b) =>
     a.name.localeCompare(b.name)
-  );
-  const [shinyPoke, setShinyPoke] = useState(null);
+  )
+  const [shinyPoke, setShinyPoke] = useState(null)
 
-  const handleMouseOver = (poke) => setShinyPoke(poke);
-  const handleMouseLeave = () => setShinyPoke(null);
+  const handleMouseOver = (poke) => setShinyPoke(poke)
+  const handleMouseLeave = () => setShinyPoke(null)
 
   return (
     <section>
       {sortedPokesByName.map((poke) => (
         <article key={poke.name}>
-          <h1 style={{ textTransform: "capitalize" }}>{poke.name}</h1>
+          <h1 style={{ textTransform: 'capitalize' }}>{poke.name}</h1>
           <a href={poke.videoLink} target="_blank" rel="noreferrer">
             <img
               onMouseOver={() => handleMouseOver(poke)}
@@ -32,7 +30,7 @@ const PokeCard = () => {
         </article>
       ))}
     </section>
-  );
-};
+  )
+}
 
-export default PokeCard;
+export default PokeCard

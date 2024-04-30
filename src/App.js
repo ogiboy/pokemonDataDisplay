@@ -1,6 +1,6 @@
-import React from "react";
-import "./styles.css";
-import PokeCards from "../src/component/PokeCards";
+import React from 'react'
+import './styles.css'
+import PokeCards from '../src/component/PokeCards'
 
 export default function App() {
   return (
@@ -8,5 +8,5 @@ export default function App() {
       <h1>2. Challenge: Loops</h1>
       <PokeCards />
     </div>
-  );
+  )
 }
